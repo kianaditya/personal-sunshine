@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  background: gainsboro;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+
+.h-card {
+  padding: 10px;
+}

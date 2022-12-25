@@ -1,0 +1,23 @@
+{{/* {{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ partial "metadata.html" . }}
+<br /><br />
+{{ .Content }} {{ end }} */}} {{ define "main" }}
+<section class="section">
+  <article class="post">
+    <div class="blog__container">
+      <h1 class="blog__title" id="post__title">{{ .Title }}</h1>
+      <div class="blog__details">
+        <div class="blog__info">
+          <p>
+            {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }}
+            minutes {{ end }} read
+          </p>
+        </div>
+        {{ partial "metadata.html" . }}
+      </div>
+      <div class="page-text">{{ .Content }}</div>
+    </div>
+  </article>
+</section>
+{{ end }}

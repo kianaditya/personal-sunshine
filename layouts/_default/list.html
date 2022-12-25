@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="content">
+  {{/*  <h1>{{ .Title }}</h1>  */}}
+
+  {{ range .Site.RegularPages }}
+
+  {{ partial "metadata.html" . }}
+  <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <a class="summary" href="{{ .RelPermalink }}">
+    <p>{{ .Summary }}</p>
+  </a>
+  {{ end }}
+</div>
+
+{{ end }}
