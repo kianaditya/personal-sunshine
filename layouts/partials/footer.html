@@ -1,24 +1,20 @@
 {{ if not .Site.Params.hideFooter | default false }}
-  <footer class="footer">
-    <section class="container">
-      {{ with .Site.Params.footerContent | safeHTML }}
-        <p>{{ . }}</p>
-      {{ end }}
-      {{ if not .Site.Params.hideCopyright }}
-        ©
-        {{ if (and (.Site.Params.since) (lt .Site.Params.since now.Year)) }}
-          {{ .Site.Params.since }} -
-        {{ end }}
-        {{ now.Year }}
-        <a class="h-card" rel="me" href="https://adityanaik.dev/"> {{ with .Site.Params.author }}</a> {{ . }} {{ end }}
-      {{ end }}
-      {{ if not .Site.Params.hideCredits }}
-      {{ end }}
-      {{ if .Site.Params.commit }}
-        {{ if .GitInfo }}
-          [<a href="{{ .Site.Params.commit }}/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>]
-        {{ end }}
-      {{ end }}
-    </section>
-  </footer>
+<footer class="footer">
+  <section class="container">
+    {{ with .Site.Params.footerContent | safeHTML }}
+    <p>{{ . }}</p>
+    {{ end }} {{ if not .Site.Params.hideCopyright }} © {{ if (and
+    (.Site.Params.since) (lt .Site.Params.since now.Year)) }} {{
+    .Site.Params.since }} - {{ end }} {{ now.Year }}
+    <a class="h-card" rel="me" href="https://adityanaik.dev/">
+      {{ with .Site.Params.author }}
+    </a>
+    {{ . }} {{ end }} {{ end }} {{ if not .Site.Params.hideCredits }} {{ end }}
+    {{ if .Site.Params.commit }} {{ if .GitInfo }} [
+    <a href="{{ .Site.Params.commit }}/{{ .GitInfo.Hash }}">
+      {{ .GitInfo.AbbreviatedHash }}
+    </a>
+    ] {{ end }} {{ end }}
+  </section>
+</footer>
 {{ end }}

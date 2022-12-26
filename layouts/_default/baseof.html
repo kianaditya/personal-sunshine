@@ -2,52 +2,62 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     <title>
-      {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Type }} | {{ if .Title}}{{ .Title}}{{ else }}{{humanize .Slug}}{{ end }}{{ end }}
+      {{ if .IsHome }}
+        {{ .Site.Title }}
+      {{ else }}
+        {{ .Type }} |
+        {{ if .Title }}{{ .Title }}{{ else }}{{ humanize .Slug }}{{ end }}
+      {{ end }}
     </title>
 
     <meta charset="UTF-8" />
     <meta name="language" content="en" />
     <meta
       name="description"
-      content="{{ if .IsHome}}{{ .Site.Params.Description }}{{ else if .Description }}{{.Page.Params.Description}}{{ else }}{{humanize .Slug}}{{ end }}"
+      content="{{ if .IsHome }}
+        {{ .Site.Params.Description }}
+      {{ else if .Description }}
+        {{ .Page.Params.Description }}
+      {{ else }}
+        {{ humanize .Slug }}
+      {{ end }}"
     />
-    <meta name="keywords" content="{{ delimit .Keywords " , " }}">
+    <meta name="keywords" content="{{ delimit .Keywords " , " }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link href="/css/theme.css" rel="stylesheet" type="text/css">
-    {{ range .AlternativeOutputFormats -}} {{ printf `
-    <link rel="%s" type="%s" href="%s" title="%s" />
-    ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}} {{
-    if (.Params.mermaid) }}
-    <!-- MermaidJS support -->
-    {{ partial "seo-schema.html" .}}
-    <script
-      async
-      src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"
-    ></script>
+    <link href="/css/theme.css" rel="stylesheet" type="text/css" />
+    {{ range .AlternativeOutputFormats -}}
+      {{ printf `
+        <link rel="%s" type="%s" href="%s" title="%s" />
+        ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML
+      }}
+    {{ end -}}
+    {{ if (.Params.mermaid) }}
+      <!-- MermaidJS support -->
+      {{ partial "seo-schema.html" . }}
+      <script
+        async
+        src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"
+      ></script>
     {{ end }}
-    <link
-      rel="webmention"
-      href="{{ .Site.Params.webmention }}"
-    />
+    <link rel="webmention" href="{{ .Site.Params.webmention }}" />
     <link rel="pingback" href="https://webmention.io/adityanaik.dev/xmlrpc" />
 
-    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
-    <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-    <link rel="micropub" href="{{ .Site.Params.micropub}}">
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+    <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+    <link rel="micropub" href="{{ .Site.Params.micropub }}" />
 
     {{ partial "head.html" }}
-
   </head>
 
   <body>
     {{ partial "header.html" . }}
 
-    <main>{{ block "main" . }} {{ end }}</main>
+
+    <main>{{ block "main" . }}{{ end }}</main>
 
     {{ partial "footer" . }}
-
-    {{ block "scripts" . }} {{ end }}
+    {{ block "scripts" . }}{{ end }}
   </body>
 </html>
