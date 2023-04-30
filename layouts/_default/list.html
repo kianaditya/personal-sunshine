@@ -1,13 +1,12 @@
 {{ define "main" }}
   <div class="content">
-    {{ range .Site.RegularPages }}
-
-      {{ partial "metadata.html" . }}
+    {{ range .Pages }}
       <h3>
         <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h3>
+      {{ partial "metadata.html" . }}
       <a class="summary" href="{{ .RelPermalink }}">
-        <p>{{ .Summary }}</p>
+        <p class="summary-text">{{ .Summary }}</p>
       </a>
     {{ end }}
   </div>

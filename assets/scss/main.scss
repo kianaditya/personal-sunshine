@@ -1,3 +1,4 @@
+@import 'font';
 @import 'vars';
 
 html {
@@ -26,6 +27,11 @@ main {
   margin: 0 200px;
 }
 
+.name {
+  font-size: 1.6em;
+  font-family: 'Ubuntu';
+}
+
 .container {
   display: flex;
   padding: 10px;
@@ -42,4 +48,9 @@ main {
 
 .summary {
   font-family: 'Exo';
+}
+
+.summary-text {
+  font-size: 1rem;
+  margin-top: 0.1rem;
 }
