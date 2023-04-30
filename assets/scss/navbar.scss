@@ -1,10 +1,12 @@
+@import 'vars';
+
 .navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   height: 90px;
-  background: gainsboro;
+  background: $blue;
   padding: 0 200px;
 }
 
@@ -25,10 +27,19 @@ a {
   text-decoration: none;
   font-size: 24px;
   margin-right: 10px;
-  color: black;
+  // color: black;
   transition: all 100ms;
 }
 .navbar__right a:hover {
   text-decoration: underline;
   font-weight: bold;
+}
+
+.nav-link {
+  color: $yellow;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-decoration: none;
+  // padding: 0.5rem 1rem;
+  transition: all 100ms;
 }

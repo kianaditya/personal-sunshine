@@ -1,5 +1,5 @@
-@import 'font';
-@import 'vars';
+@import "font";
+@import "vars";
 
 html {
   box-sizing: border-box;
@@ -17,10 +17,12 @@ body {
   font-size: 100%;
   line-height: 1.5;
   margin: 0 auto;
-  font-family: 'Ubuntu', 'Exo','Fira-code', Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: "Ubuntu", "Exo", "Fira-code", Monaco, Consolas, Ubuntu Mono,
+    monospace;
 }
 .content {
-  margin: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 main {
@@ -29,7 +31,8 @@ main {
 
 .name {
   font-size: 1.6em;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
+  color: $white;
 }
 
 .container {
@@ -43,14 +46,28 @@ main {
 }
 
 .title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
 }
 
 .summary {
-  font-family: 'Exo';
+  font-family: "Exo";
 }
 
 .summary-text {
   font-size: 1rem;
   margin-top: 0.1rem;
+}
+
+.metadata {
+  font-family: "Exo";
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0rem;
 }

@@ -4,6 +4,7 @@
       <div class="blog__container line-numbers h-entry">
         <h1 class="blog__title" id="post__title">{{ .Title }}</h1>
         <div class="blog__details">
+          {{ partial "metadata.html" . }}
           <div class="blog__info">
             <p>
               {{ .ReadingTime }}
@@ -15,7 +16,6 @@
               read
             </p>
           </div>
-          {{ partial "metadata.html" . }}
         </div>
         <div class="page-text">{{ .Content }}</div>
       </div>
