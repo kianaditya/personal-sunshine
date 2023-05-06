@@ -1,23 +1,32 @@
 {{ define "main" }}
-{{/*  <div class="list_main">  */}}
+  {{/* <div class="list_main"> */}}
+
 
   <div class="content">
     {{ if .Data.Term }}
-      <h6>Posts with tag <span class="tag__selected">{{ .Data.Term | markdownify }}</span></h6>
+      <h6>
+        Posts with tag
+        <span class="tag__selected">{{ .Data.Term | markdownify }}</span>
+      </h6>
     {{ end }}
 
     {{ range .Pages }}
-      <h3>
-        <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </h3>
+      {{ if .Title }}
+        <h3>
+          <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+      {{ else }}
+        <h6>
+          <a class="summary" href="{{ .RelPermalink }}">
+            <p class="summary-text">{{ .Summary | truncate 100 }}</p>
+          </a>
+        </h6>
+      {{ end }}
       {{ partial "metadata.html" . }}
-      {{/*  <a class="summary" href="{{ .RelPermalink }}">
-        <p class="summary-text">{{ .Summary }}</p>
-      </a>  */}}
     {{ end }}
   </div>
   <div class="tags">
     {{ partial "tags-list.html" . }}
   </div>
-{{/*  </div>  */}}
+  {{/* </div> */}}
 {{ end }}
