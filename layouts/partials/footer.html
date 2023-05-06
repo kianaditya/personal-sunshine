@@ -1,6 +1,6 @@
 {{ if not .Site.Params.hideFooter | default false }}
 <footer class="footer">
-  <section class="container">
+  <section class="container footer__container">
     {{ with .Site.Params.footerContent | safeHTML }}
     <p>{{ . }}</p>
     {{ end }} {{ if not .Site.Params.hideCopyright }} © {{ if (and

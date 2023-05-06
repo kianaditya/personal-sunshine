@@ -1,0 +1,21 @@
+<ul>
+  {{ $activeTag := .Params.title | lower }}
+  {{ range $.Site.Taxonomies.tags.ByCount }}
+    {{ if gt .Count 1 }}
+      {{ $class := cond (eq $activeTag .Name) "tag__selected" "tag__link__list" }}
+      <li>
+        <a class="tag__link__list" href="/tags/{{ .Name }}">
+          {{ .Name | humanize }} <small>({{ .Count }})</small>
+        </a>
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>
+
+<style>
+  ul {
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+  }
+</style>

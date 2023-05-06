@@ -20,13 +20,17 @@ body {
   font-family: "Ubuntu", "Exo", "Fira-code", Monaco, Consolas, Ubuntu Mono,
     monospace;
 }
+
 .content {
   margin-bottom: 2rem;
   padding: 1rem;
+  flex: 1;
 }
 
 main {
-  margin: 0 200px;
+  margin: 0 120px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .name {
@@ -41,8 +45,9 @@ main {
 }
 
 .post-date {
-  color: $grey;
+  color: $yellow;
   font-size: 0.8rem;
+  align-self: center;
 }
 
 .title {
@@ -63,7 +68,7 @@ main {
   font-size: 0.8rem;
   margin-top: 0.5rem;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .tags-list {

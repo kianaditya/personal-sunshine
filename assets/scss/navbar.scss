@@ -7,7 +7,7 @@
   justify-content: space-between;
   height: 90px;
   background: $blue;
-  padding: 0 200px;
+  padding: 0 0 0 200px;
 }
 
 .navbar__left {
@@ -16,8 +16,11 @@
 }
 .navbar__right {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family: "Exo";
   font-size: medium;
+  min-width: 400px;
 }
 a {
   text-decoration: none !important;

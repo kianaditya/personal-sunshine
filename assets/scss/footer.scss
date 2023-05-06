@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   height: 45px;
-  background: gainsboro;
+  background: $blue;
   padding: 10px;
   position: fixed;
   left: 0;
@@ -18,4 +18,8 @@
 
 .h-card {
   padding: 10px;
+}
+
+.footer__container {
+  color: $yellow;
 }

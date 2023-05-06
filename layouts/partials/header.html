@@ -1,21 +1,24 @@
 <header>
   <nav class="navbar" role="navigation">
-      <div class="navbar__left">
-          <a href="/"><strong class="name">{{ .Site.Params.name}}</strong></a>
-      </div>
-      <div class="navbar__right">
+    <div class="navbar__left">
+      <a href="/"><strong class="name">{{ .Site.Params.name }}</strong></a>
+    </div>
+    <div class="navbar__right">
+      <div>
         <nav id="nav" class="nav justify-content-center">
           {{ range .Site.Menus.main }}
-          <a class="nav-link" href="{{ .URL }}">
-          {{ if .Pre }}
-          {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
-          {{ $icon }}
+            <a class="nav-link" href="{{ .URL }}">
+              {{ if .Pre }}
+                {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+                {{ $icon }}
+              {{ end }}
+              {{ $text := print .Name | safeHTML }}
+              {{ $text }}
+            </a>
           {{ end }}
-          {{ $text := print .Name | safeHTML }}
-          {{ $text }}
-          </a>
-          {{ end }}
-      </nav>
+        </nav>
       </div>
+      {{/*  {{ partial "toggle.html" . }}  */}}
+    </div>
   </nav>
 </header>
