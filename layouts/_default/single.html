@@ -24,58 +24,58 @@
 {{ end }}
 
 {{ define "scripts" }}
-
-  {{/* Goat Counter for analytics */}}
-  {{/* <script data-goatcounter="https://adityanaik.goatcounter.com/count"
-    async src="//gc.zgo.at/count.js"></script>
-  */}}
   {{/* Hardcode a specific prismjs version to avoid a redirect on every page load. */}}
+  {{/*  <link
+    href="https://unpkg.com/browse/prismjs@1.29.0/themes/prism-solarizedlight.css"
+    rel="stylesheet"
+    type="text/css"
+  /> */}}
   <script
     async
-    src="https://unpkg.com/prismjs@1.23.0/components/prism-core.min.js"
+    src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js"
   ></script>
 
   {{/* Add line numbers to code. */}}
   <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
     rel="stylesheet"
     type="text/css"
   />
   <script
     async
-    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.js"
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
   ></script>
 
   {{/* Add line highlights to code. */}}
   <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-highlight/prism-line-highlight.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-highlight/prism-line-highlight.min.css"
     rel="stylesheet"
     type="text/css"
   />
   <script
     async
-    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-highlight/prism-line-highlight.min.js"
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-highlight/prism-line-highlight.min.js"
   ></script>
 
   {{/* Add toolbar plugin */}}
   <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
     rel="stylesheet"
     type="text/css"
   />
   <script
     async
-    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/toolbar/prism-toolbar.min.js"
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"
   ></script>
 
   <script
     async
-    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"
   ></script>
   {{/* Automatically loads the needed languages to highlight the code blocks. */}}
   <script
     async
-    src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
-    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"
+    src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.29.0/components/"
   ></script>
 {{ end }}

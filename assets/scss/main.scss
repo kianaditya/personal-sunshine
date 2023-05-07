@@ -52,10 +52,13 @@ main {
 
 .title {
   font-family: "Ubuntu";
+  text-decoration: none !important;
+  color: $blue;
 }
 
 .summary {
   font-family: "Exo";
+  color: $blue;
 }
 
 .summary-text {
@@ -75,4 +78,15 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin-top: 0rem;
+}
+
+figcaption {
+  padding: 0.5em;
+  color: #9b9b9b;
+  font-size: 1rem;
+  text-align: center;
+}
+
+figure {
+  max-width: fit-content;
 }

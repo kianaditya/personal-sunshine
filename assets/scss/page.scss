@@ -96,6 +96,9 @@
   margin-bottom: 0.5rem;
   font-family: "Ubuntu";
   font-size: 2em;
+  a {
+    text-decoration: none !important;
+  }
 }
 
 .post__date {
@@ -310,5 +313,59 @@ table {
   td {
     padding: 0.5em 1em;
     border: 1px double $greyTableBorder;
+  }
+}
+
+.block {
+  margin: 1.5em 10px;
+  padding: 0.25em 10px;
+  p {
+    margin: 0.1rem;
+    font-style: italic;
+  }
+  &.info {
+    border-left: 5px solid $infoColor;
+    background-color: lighten($infoColor, 50%);
+  }
+
+  &.warning {
+    border-left: 5px solid $warningColor;
+    background-color: lighten($warningColor, 30%);
+  }
+
+  &.error {
+    border-left: 5px solid $errorColor;
+    background-color: lighten($errorColor, 30%);
+  }
+
+  &.normal {
+    border-left: 5px solid $baseColorDark;
+    background-color: lighten($baseColorDark, 30%);
+  }
+}
+
+.post img {
+  max-width: fit-content;
+}
+
+.post Blockquote {
+  &::before {
+    font-size: 4em;
+    margin-top: 0.1em;
+    margin-left: -0.42em;
+    color: darken($baseColor, 33%);
+  }
+  margin: 1.5em 10px;
+  padding: 0.25em 10px;
+  p {
+    margin: 0.1rem;
+    font-style: italic;
+    background-color: darken($baseColor, 1%);;
+  }
+  cite {
+    &::before {
+      content: "\a— ";
+      white-space: pre;
+    }
   }
 }

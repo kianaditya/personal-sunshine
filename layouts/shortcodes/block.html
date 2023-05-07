@@ -1,0 +1,4 @@
+{{ $type := .Get 0 }}
+{{ printf "<div class=\"block %s\">" $type | htmlUnescape | safeHTML }}
+{{ .Inner | safeHTML }}
+{{ printf "</div>" | htmlUnescape | safeHTML }}
