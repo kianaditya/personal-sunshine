@@ -1,0 +1,15 @@
+{{/*  {{$type := .Type}}
+{{ $inner := .Inner}}
+{{$attributes := .Attributes}}
+<pre>
+  <div>{{ .Type }}</div>{{ printf "%s" $type }}
+<code class="language-{{ .Language }}">{{ .Content }}</code>
+</pre>  */}}
+{{ $class := .Attributes.class | default ""    }}
+{{ $lang  := .Attributes.lang  | default .Type }}
+{{ if transform.CanHighlight $lang }}
+<div class="{{ $class }}">{{ highlight .Inner $lang }}</div>
+{{else}}
+{{ printf "%#v" . }}
+<pre><code class="{{ $class }}">{{.Inner}}</code></pre>
+{{end}}

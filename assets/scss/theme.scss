@@ -19,8 +19,8 @@ cyan      #2aa198
 green     #859900
 */
 
-@import "font";
-
+@import 'font';
+@import 'vars';
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #657b83; /* base00 */
@@ -140,4 +140,11 @@ pre[class*="language-"] {
 
 .token.entity {
 	cursor: help;
+}
+
+pre[data-file]::before {
+  content: attr(data-file);
+  position: absolute;
+  top: 0;
+  right: 0;
 }

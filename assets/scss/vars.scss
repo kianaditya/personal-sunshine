@@ -12,6 +12,7 @@ $red: #ff3c38;
 $yellow: #e7a339;
 
 // screenSizes
+$small: 600px;
 $medium: 800px;
 $large: 1400px;
 
@@ -20,3 +21,40 @@ $baseColorDark: #9b9b9b;
 $infoColor: #00bcd4;
 $warningColor: #ff9800;
 $errorColor: #f44336;
+
+// Group colors into common, light and dark
+$colors: (
+  "common": (
+    "black": $black,
+    "lightGrey": $lightGrey,
+    "greyTableBorder": $greyTableBorder,
+    "grey": $grey,
+    "darkGrey": $darkGrey,
+    "white": $white,
+    "primary": $primary,
+    "blue": $blue,
+    "green": $green,
+    "red": $red,
+    "yellow": $yellow
+  ),
+  "light": (
+    "base": $baseColor,
+    "info": $infoColor,
+    "warning": $warningColor,
+    "error": $errorColor
+  ),
+  "dark": (
+    "base": $baseColorDark,
+    "info": $infoColor,
+    "warning": $warningColor,
+    "error": $errorColor
+  )
+);
+
+// Define viewport breakpoints
+$breakpoints: (
+  "small": $small,
+  "medium": $medium,
+  "large": $large
+);
+

@@ -24,12 +24,13 @@
 {{ end }}
 
 {{ define "scripts" }}
+  {{/* Goat Counter for analytics */}}
+  {{/* <script data-goatcounter="https://adityanaik.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
+  */}}
   {{/* Hardcode a specific prismjs version to avoid a redirect on every page load. */}}
-  {{/*  <link
-    href="https://unpkg.com/browse/prismjs@1.29.0/themes/prism-solarizedlight.css"
-    rel="stylesheet"
-    type="text/css"
-  /> */}}
+
+
   <script
     async
     src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js"
@@ -40,6 +41,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
     rel="stylesheet"
     type="text/css"
+    media="print"
+    onload="this.media='all'"
   />
   <script
     async
@@ -51,6 +54,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-highlight/prism-line-highlight.min.css"
     rel="stylesheet"
     type="text/css"
+    media="print"
+    onload="this.media='all'"
   />
   <script
     async
@@ -62,10 +67,18 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
     rel="stylesheet"
     type="text/css"
+    media="print"
+    onload="this.media='all'"
   />
   <script
     async
     src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"
+  ></script>
+
+  {{/* Add show language plugin */}}
+  <script
+    async
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/show-language/prism-show-language.min.js"
   ></script>
 
   <script
