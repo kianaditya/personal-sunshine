@@ -3,6 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   {{ $sass := resources.Get "scss/style.scss" }} {{ $style := $sass |
   css.Sass | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
   <link
     rel="stylesheet"
     href="{{ $style.Permalink }}"
