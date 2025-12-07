@@ -23,13 +23,14 @@ body {
 
 .content {
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding: 1rem 12rem 0;
   flex: 1;
 }
 
 main {
   margin: 0 0.1vw;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -48,6 +49,7 @@ main {
   color: $yellow;
   font-size: 0.8rem;
   align-self: center;
+  padding-right: 1rem;
 }
 
 .title {
@@ -71,7 +73,7 @@ main {
   font-size: 0.8rem;
   margin-top: 0.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .tags-list {
