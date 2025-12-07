@@ -1,7 +1,4 @@
 {{ define "main" }}
-  {{/* <div class="list_main"> */}}
-
-
   <div class="content">
     {{ if .Data.Term }}
       <h6>
@@ -25,8 +22,7 @@
       {{ partial "metadata.html" . }}
     {{ end }}
   </div>
-  <div class="tags">
+  {{/*  <div class="tags">
     {{ partial "tags-list.html" . }}
-  </div>
-  {{/* </div> */}}
+  </div>  */}}
 {{ end }}

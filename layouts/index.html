@@ -1,5 +1,14 @@
 {{ define "main" }}
-  {{ .Content }}
+  <div class="about">
+    <h1>{{ .Title | default .Params.heading }}<span class="fancy">.</span></h1>
+    {{ if .Params.handle }}
+      <span class="handle">@{{ .Params.handle }}</span>
+    {{ end }}
+    <h5 class="subheading">{{ .Description | default .Params.subheading }}</h5>
+    {{ .Content }}
+    <!-- Renders body Markdown from _index.md -->
+    {{ partial "social-icons.html" . }}
+  </div>
 {{ end }}
 
 {{ define "footer" }}

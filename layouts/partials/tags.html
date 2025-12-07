@@ -1,13 +1,12 @@
-{{/* {{ with .Param "tags" }} */}}
+
 {{ with .Params.tags }}
   <ul class="tags__list">
     {{ range $index, $tag := . }}
       <li class="tag__item">
         <a class="tag__link" href="/tags/{{ . | urlize }}"
-          >#{{ $tag | urlize | humanize }}</a
+          >{{ $tag | urlize | humanize }}</a
         >
       </li>
     {{ end }}
-    {{/* {{ end }} */}}
   </ul>
 {{ end }}
