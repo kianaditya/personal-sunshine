@@ -5,7 +5,6 @@
       {{ if .IsHome }}
         {{ .Site.Title }}
       {{ else }}
-        {{ .Type }} |
         {{ if .Title }}{{ .Title }}{{ else }}{{ humanize .Slug }}{{ end }}
       {{ end }}
     </title>
