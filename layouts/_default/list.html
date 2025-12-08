@@ -13,11 +13,11 @@
           <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
         </h3>
       {{ else }}
-        <h6>
-          <a class="summary" href="{{ .RelPermalink }}">
-            <p class="summary-text">{{ .Summary | truncate 100 }}</p>
+        <h3>
+          <a class="title" href="{{ .RelPermalink }}">
+            {{ .Summary | truncate 60 }}
           </a>
-        </h6>
+        </h3>
       {{ end }}
       {{ partial "metadata.html" . }}
     {{ end }}
