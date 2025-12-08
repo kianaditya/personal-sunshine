@@ -32,6 +32,10 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script
+    src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.29.0/components/"
+  ></script>
 
   {{/* Add line numbers to code. */}}
   <link
@@ -42,7 +46,6 @@
     onload="this.media='all'"
   />
   <script
-    async
     src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
   ></script>
 
@@ -55,7 +58,6 @@
     onload="this.media='all'"
   />
   <script
-    async
     src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-highlight/prism-line-highlight.min.js"
   ></script>
 
@@ -68,24 +70,17 @@
     onload="this.media='all'"
   />
   <script
-    async
     src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"
   ></script>
 
   {{/* Add show language plugin */}}
   <script
-    async
     src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/show-language/prism-show-language.min.js"
   ></script>
 
   <script
-    async
     src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"
   ></script>
   {{/* Automatically loads the needed languages to highlight the code blocks. */}}
-  <script
-    async
-    src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"
-    data-autoloader-path="https://unpkg.com/prismjs@1.29.0/components/"
-  ></script>
+
 {{ end }}
