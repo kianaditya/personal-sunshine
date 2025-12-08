@@ -1,4 +1,4 @@
-{{/*  <head>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   {{ $sass := resources.Get "scss/style.scss" }} {{ $style := $sass |
@@ -9,16 +9,4 @@
     href="{{ $style.Permalink }}"
     integrity="{{ $style.Data.Integrity }}"
   />
-</head>  */}}
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  {{/* SASS Processing - Production Ready */}}
-  {{ $sass := resources.Get "assets/scss/style.scss" }}
-  {{ if $sass }}
-    {{ $style := $sass | resources.ToCSS | resources.Minify | resources.Fingerprint "sha256" }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
-  {{ end }}
 </head>
