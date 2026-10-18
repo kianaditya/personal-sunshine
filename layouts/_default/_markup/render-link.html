@@ -13,6 +13,6 @@
 <a
   href="{{ $link | safeURL }}"
   {{ with .Title }}title="{{ . }}"{{ end }}
-  target="_blank"
+  {{ if $isRemote }}target="_blank" rel="noopener"{{ end }}
   >{{ .Text | safeHTML }}</a
 >

@@ -1,12 +1,14 @@
 
 {{ with .Params.tags }}
   <ul class="tags__list">
-    {{ range $index, $tag := . }}
+    {{ range . }}
+      {{ with $.Site.GetPage (printf "tags/%s" .) }}
       <li class="tag__item">
-        <a class="tag__link" href="/tags/{{ . | urlize }}"
-          >{{ $tag | urlize | humanize }}</a
+        <a class="tag__link" href="{{ .RelPermalink }}"
+          >{{ .Title | humanize }}</a
         >
       </li>
+      {{ end }}
     {{ end }}
   </ul>
 {{ end }}

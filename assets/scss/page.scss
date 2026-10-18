@@ -369,3 +369,34 @@ table {
     }
   }
 }
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 2rem;
+
+  h1 {
+    font-size: 4rem;
+    color: $grey;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $darkGrey;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    color: $darkGrey;
+    text-decoration: underline;
+
+    &:hover {
+      color: $baseColorDark;
+    }
+  }
+}
