@@ -12,7 +12,7 @@
       "name" : "{{ .Title }}",
       "headline" : "{{ .Title }}",
       "description" : "{{ .Description }}",
-      "inLanguage" : {{ with .Site.LanguageCode }}"{{ . }}"{{ else }}"en"{{ end }},
+      "inLanguage" : {{ with .Site.Language.Lang }}"{{ . }}"{{ else }}"en"{{ end }},
       "author" : "{{ .Site.Params.name }}",
       "creator" : "{{ .Site.Params.name }}",
       "publisher": "{{ .Site.Params.name }}",
