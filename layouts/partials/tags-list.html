@@ -4,8 +4,8 @@
     {{ if gt .Count 1 }}
       {{ $class := cond (eq $activeTag .Name) "tag__selected" "tag__link__list" }}
       <li>
-        <a class="tag__link__list" href="/tags/{{ .Name }}">
-          {{ .Name | humanize }} <small>({{ .Count }})</small>
+        <a class="tag__link__list" href="{{ .Page.RelPermalink }}">
+          {{ .Page.Title | humanize }} <small>({{ .Count }})</small>
         </a>
       </li>
     {{ end }}

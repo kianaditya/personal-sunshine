@@ -12,18 +12,18 @@
       "name" : "{{ .Title }}",
       "headline" : "{{ .Title }}",
       "description" : "{{ .Description }}",
-      "inLanguage" : "en-US",
+      "inLanguage" : {{ with .Site.LanguageCode }}"{{ . }}"{{ else }}"en"{{ end }},
       "author" : "{{ .Site.Params.name }}",
       "creator" : "{{ .Site.Params.name }}",
       "publisher": "{{ .Site.Params.name }}",
       "accountablePerson" : "{{ .Site.Params.name }}",
       "copyrightHolder" : "{{ .Site.Params.name }}",
-      "copyrightYear" : "{{ .Date.Format "2006" }}",
+      "copyrightYear" : "{{ with .Lastmod }}{{ .Format "2006" }}{{ else }}{{ .Date.Format "2006" }}{{ end }}",
       "datePublished": "{{ .Date.Format "2006-01-02" }}",
-      "dateModified" : "{{ .Date.Format "2006-01-02" }}",
+      "dateModified" : "{{ with .Lastmod }}{{ .Format "2006-01-02" }}{{ else }}{{ .Date.Format "2006-01-02" }}{{ end }}",
       "url" : "{{ .Permalink }}",
       "wordCount" : "{{ .WordCount }}",
-      "keywords" : [{{ if isset .Params "keywords" }}{{ range .Params.keywords }}"{{ . }}", {{ end }}{{ end }}"Blog"]
+      "keywords" : [{{ if isset .Params "keywords" }}{{ range $i, $kw := .Params.keywords }}{{ if $i }}, {{ end }}"{{ $kw }}"{{ end }}{{ else }}"{{ .Section }}"{{ end }}]
     }
   {{ else }}
     {
