@@ -1,150 +1,218 @@
-/*
-SOLARIZED HEX
---------- -------
-base03    #002b36
-base02    #073642
-base01    #586e75
-base00    #657b83
-base0     #839496
-base1     #93a1a1
-base2     #eee8d5
-base3     #fdf6e3
-yellow    #b58900
-orange    #cb4b16
-red       #dc322f
-magenta   #d33682
-violet    #6c71c4
-blue      #268bd2
-cyan      #2aa198
-green     #859900
-*/
-
-@import 'font';
-@import 'vars';
-code[class*="language-"],
-pre[class*="language-"] {
-	color: #657b83; /* base00 */
-  font-family: 'Fira Code', monospace;
-	font-size: 1em;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-
-	/* line-height: 1.5; */
-
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
+/* === Dark Mode Theme === */
+body.dark-mode {
+	background-color: $bg-dark-body;
+	color: $color-dark-text;
 }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-	background: #073642; /* base02 */
+body.dark-mode main {
+	background-color: $bg-dark-body;
+	color: $color-dark-text;
 }
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-	background: #073642; /* base02 */
+/* Dark mode navbar */
+body.dark-mode .navbar {
+	background: #1a1a1a;
 }
 
-/* Code blocks */
-pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
-	border-radius: 0.3em;
+body.dark-mode .name {
+	color: $color-dark-text;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background-color: #fdf6e3; /* base3 */
+body.dark-mode .navbar__right a {
+	color: $color-dark-text;
 }
 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
+body.dark-mode .navbar__right a:hover {
+	color: $color-yellow;
 }
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #93a1a1; /* base1 */
+/* Dark mode footer */
+body.dark-mode .footer {
+	background: #1a1a1a;
 }
 
-.token.punctuation {
-	color: #586e75; /* base01 */
+body.dark-mode .footer__container {
+	color: $color-yellow;
 }
 
-.token.namespace {
-	opacity: .7;
+body.dark-mode .h-card {
+	color: $color-dark-muted;
 }
 
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-	color: #268bd2; /* blue */
+/* Dark mode content area */
+body.dark-mode .content {
+	background-color: $bg-dark-body;
 }
 
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.url,
-.token.inserted {
-	color: #2aa198; /* cyan */
+/* Dark mode links */
+body.dark-mode a {
+	color: #8ab4f8;
 }
 
-.token.entity {
-	color: #657b83; /* base00 */
-	background: #eee8d5; /* base2 */
+/* Dark mode titles */
+body.dark-mode .title {
+	color: #8ab4f8;
 }
 
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-	color: #859900; /* green */
+body.dark-mode .summary {
+	color: $color-dark-text;
 }
 
-.token.function,
-.token.class-name {
-	color: #b58900; /* yellow */
+body.dark-mode #post__title {
+	color: $color-dark-text;
 }
 
-.token.regex,
-.token.important,
-.token.variable {
-	color: #cb4b16; /* orange */
+/* Dark mode text elements */
+body.dark-mode p,
+body.dark-mode li {
+	color: $color-dark-text;
 }
 
-.token.important,
-.token.bold {
-	font-weight: bold;
-}
-.token.italic {
-	font-style: italic;
+body.dark-mode .post-date,
+body.dark-mode .post__date {
+	color: $color-dark-muted;
 }
 
-.token.entity {
-	cursor: help;
+/* Dark mode headings */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+	color: $color-dark-text;
 }
 
-pre[data-file]::before {
-  content: attr(data-file);
-  position: absolute;
-  top: 0;
-  right: 0;
+/* Dark mode code blocks */
+body.dark-mode pre {
+	background-color: $bg-dark-code;
+}
+
+body.dark-mode code {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode blockquote */
+body.dark-mode blockquote {
+	color: $color-dark-text;
+}
+
+body.dark-mode blockquote::before {
+	color: #555;
+}
+
+body.dark-mode blockquote p {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Dark mode table */
+body.dark-mode table thead {
+	background-color: $bg-dark-table-header;
+}
+
+body.dark-mode table th,
+body.dark-mode table td {
+	border-color: #444;
+}
+
+/* Dark mode tag badges */
+body.dark-mode .tag__link,
+body.dark-mode .tag__link__list {
+	background: rgba(255, 255, 255, 0.1);
+	color: #ccc;
+}
+
+body.dark-mode .tag__link:hover,
+body.dark-mode .tag__link__list:hover {
+	background: rgba(231, 163, 57, 0.2);
+}
+
+body.dark-mode .tag__selected {
+	background: rgba(231, 163, 57, 0.2);
+}
+
+/* Dark mode pagination */
+body.dark-mode .pagination__item {
+	color: $color-dark-text;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.05);
+	}
+}
+
+body.dark-mode .pagination__label {
+	color: $color-dark-muted;
+}
+
+body.dark-mode .pagination__title {
+	color: $color-dark-text;
+}
+
+/* Dark mode info blocks */
+body.dark-mode .block.info {
+	background-color: rgba(0, 188, 212, 0.15);
+}
+
+body.dark-mode .block.warning {
+	background-color: rgba(255, 152, 0, 0.15);
+}
+
+body.dark-mode .block.error {
+	background-color: rgba(244, 67, 54, 0.15);
+}
+
+body.dark-mode .block.normal {
+	background-color: rgba(155, 155, 155, 0.15);
+}
+
+/* Dark mode 404 page */
+body.dark-mode .error-page h1 {
+	color: $color-dark-muted;
+}
+
+body.dark-mode .error-page p,
+body.dark-mode .error-page a {
+	color: $color-dark-text;
+}
+
+body.dark-mode .error-page a:hover {
+	color: $color-yellow;
+}
+
+/* Dark mode TOC */
+body.dark-mode #TableOfContents a {
+	color: $color-dark-muted;
+}
+
+body.dark-mode #TableOfContents a.active {
+	color: $color-dark-text;
+}
+
+/* Dark mode footer text */
+body.dark-mode footer p {
+	color: $color-dark-muted;
+	background-color: $bg-dark-body;
+}
+
+/* Dark mode splash/about page */
+body.dark-mode .handle {
+	color: $color-dark-muted;
+}
+
+body.dark-mode .writing {
+	color: $color-primary;
+}
+
+body.dark-mode .fancy {
+	color: $color-primary;
+}
+
+/* Dark mode category badge */
+body.dark-mode .category {
+	color: #fff;
+}
+
+/* Dark mode figure/figcaption */
+body.dark-mode figcaption {
+	color: $color-dark-muted;
 }

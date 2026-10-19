@@ -1,60 +1,119 @@
-// colors
-$black: #111;
-$lightGrey: #f7f7f7;
-$greyTableBorder: #eeeeee;
-$grey: #9b9b9b;
-$darkGrey: #717171;
-$white: #fff;
-$primary: #9013fe;
-$blue: #17323b;
-$green: #495b44;
-$red: #ff3c38;
-$yellow: #e7a339;
+// === Color Tokens ===
+$color-black: #111;
+$color-white: #fff;
+$color-grey-100: #f7f7f7;
+$color-grey-200: #eeeeee;
+$color-grey-400: #9b9b9b;
+$color-grey-500: #717171;
+$color-primary: #9013fe;
+$color-blue: #17323b;
+$color-green: #495b44;
+$color-red: #ff3c38;
+$color-yellow: #e7a339;
 
-// screenSizes
-$small: 600px;
-$medium: 800px;
-$large: 1400px;
+// Semantic colors
+$color-info: #00bcd4;
+$color-warning: #ff9800;
+$color-error: #f44336;
 
+// Backward-compatible aliases
+$black: $color-black;
+$color-black: $color-black;
+$white: $color-white;
+$color-white: $color-white;
+$grey: $color-grey-400;
+$color-grey: $color-grey-400;
+$color-grey-400: $color-grey-400;
+$darkGrey: $color-grey-500;
+$color-darkGrey: $color-grey-500;
+$lightGrey: $color-grey-100;
+$color-grey-100: $color-grey-100;
+$greyTableBorder: $color-grey-200;
+$color-grey-200: $color-grey-200;
+$primary: $color-primary;
+$color-primary: $color-primary;
+$blue: $color-blue;
+$color-blue: $color-blue;
+$green: $color-green;
+$color-green: $color-green;
+$red: $color-red;
+$color-red: $color-red;
+$yellow: $color-yellow;
+$color-yellow: $color-yellow;
+$infoColor: $color-info;
+$color-info: $color-info;
+$warningColor: $color-warning;
+$color-warning: $color-warning;
+$errorColor: $color-error;
+$color-error: $color-error;
 $baseColor: #fafafa;
 $baseColorDark: #9b9b9b;
-$infoColor: #00bcd4;
-$warningColor: #ff9800;
-$errorColor: #f44336;
 
-// Group colors into common, light and dark
-$colors: (
-  "common": (
-    "black": $black,
-    "lightGrey": $lightGrey,
-    "greyTableBorder": $greyTableBorder,
-    "grey": $grey,
-    "darkGrey": $darkGrey,
-    "white": $white,
-    "primary": $primary,
-    "blue": $blue,
-    "green": $green,
-    "red": $red,
-    "yellow": $yellow
-  ),
-  "light": (
-    "base": $baseColor,
-    "info": $infoColor,
-    "warning": $warningColor,
-    "error": $errorColor
-  ),
-  "dark": (
-    "base": $baseColorDark,
-    "info": $infoColor,
-    "warning": $warningColor,
-    "error": $errorColor
-  )
-);
+// Light theme backgrounds
+$bg-body: #fcfcfc;
+$bg-card: $color-white;
+$bg-code: #f6f8fa;
+$bg-table-header: $color-grey-100;
 
-// Define viewport breakpoints
-$breakpoints: (
-  "small": $small,
-  "medium": $medium,
-  "large": $large
-);
+// Dark theme backgrounds
+$bg-dark-body: #2d2d2d;
+$bg-dark-card: #3a3a3a;
+$bg-dark-code: #1e1e1e;
+$bg-dark-table-header: #3a3a3a;
+
+$color-dark-text: #f5f5f5;
+$color-dark-muted: #b0b0b0;
+
+// === Typography Tokens ===
+$font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-mono: "Fira Code", monospace;
+
+$base-font-size: 16px;
+$font-size-sm: 0.8rem;
+$font-size-base: 1rem;
+$font-size-md: 1.1rem;
+$font-size-lg: 1.4rem;
+$font-size-xl: 1.6rem;
+$font-size-2xl: 2rem;
+$font-size-3xl: 2.25rem;
+$font-size-4xl: 3rem;
+
+// === Spacing Tokens ===
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2rem;
+$space-2xl: 4rem;
+
+// === Border Radius ===
+$radius-sm: 3px;
+$radius-md: 4px;
+$radius-lg: 5px;
+$radius-full: 50%;
+$radius-round: 30px;
+
+// === Line Heights ===
+$leading: 1.5;
+
+// === Transitions ===
+$transition-fast: 100ms;
+$transition-normal: 200ms;
+$transition-slow: 500ms;
+$ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+
+// === Breakpoints ===
+$breakpoint-sm: 600px;
+$breakpoint-md: 800px;
+$breakpoint-lg: 1400px;
+
+// Backward-compatible aliases
+$small: $breakpoint-sm;
+$medium: $breakpoint-md;
+$large: $breakpoint-lg;
+
+// === Max Widths ===
+$content-max-width: 45rem;
+$toc-max-width: 350px;
+
 

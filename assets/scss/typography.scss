@@ -1,19 +1,15 @@
-$baseFontSize: 16;
-$fontSizeMobile: 14;
-$baseLineHeight: 1.5;
 $scale: 1.414;
-$leading: $baseLineHeight * 1rem;
 
 html {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 95%;
 
-  @media screen and (min-width: $medium) {
+  @media screen and (min-width: $breakpoint-md) {
     font-size: 100%;
   }
 
-  @media screen and (min-width: $large) {
+  @media screen and (min-width: $breakpoint-lg) {
     font-size: 115%;
   }
 }
@@ -27,6 +23,7 @@ h6 {
   margin-top: $leading;
   margin-bottom: 0;
   line-height: $leading;
+  font-family: $font-primary;
 }
 
 h1 {
@@ -85,13 +82,13 @@ blockquote {
     margin-left: -0.2em;
 
     z-index: -1;
-    color: darken($white, 7%);
+    color: darken($color-white, 7%);
   }
 
   margin-top: $leading;
   margin-bottom: $leading;
   line-height: $leading;
-  color: $black;
+  color: $color-black;
 
   cite {
     &::before {
@@ -100,43 +97,8 @@ blockquote {
 
     font-style: italic;
     font-size: 0.95em;
-    color: $darkGrey;
+    color: $color-darkGrey;
   }
-}
-
-pre {
-  line-height: 1.45;
-  margin-top: $leading;
-  padding: 16px;
-  word-wrap: normal;
-  overflow: auto;
-  background-color: #f6f8fa;
-  border-radius: 3px;
-}
-
-code {
-  font-size: 85%;
-  font-family: 'Fira Code', monospace;
-  padding: 0.2em 0.4em;
-  margin: 0;
-  background-color: rgba(5, 5, 5, 0.2);
-  border-radius: 3px;
-}
-
-pre > code {
-  word-break: normal;
-  white-space: pre;
-}
-
-pre code {
-  display: inline;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
 }
 
 .lead {

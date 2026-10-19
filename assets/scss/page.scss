@@ -3,15 +3,16 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .blog__info {
-  margin-top: 0.5rem;
+  margin-top: $space-sm;
   margin-left: 20px;
-  // flex: justify-content;
 }
+
 .blog__info p {
   margin-block-start: 2px;
   margin-block-end: 2px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .blog__image > img {
   height: auto;
