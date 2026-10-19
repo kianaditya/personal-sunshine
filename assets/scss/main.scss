@@ -17,8 +17,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   margin: 0 auto;
-  font-family: "Ubuntu", "Exo", "Fira-code", Monaco, Consolas, Ubuntu Mono,
-    monospace;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .content {
@@ -36,7 +35,7 @@ main {
 
 .name {
   font-size: 1.6em;
-  font-family: "Ubuntu";
+  font-family: "Inter";
   color: $white;
 }
 
@@ -53,13 +52,13 @@ main {
 }
 
 .title {
-  font-family: "Ubuntu";
+  font-family: "Inter";
   text-decoration: none !important;
   color: $blue;
 }
 
 .summary {
-  font-family: "Exo";
+  font-family: "Inter";
   color: $blue;
 }
 
@@ -69,7 +68,7 @@ main {
 }
 
 .metadata {
-  font-family: "Exo";
+  font-family: "Inter";
   font-size: 0.8rem;
   margin-top: 0.5rem;
   display: flex;
