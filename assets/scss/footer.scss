@@ -4,22 +4,22 @@
   align-items: center;
   justify-content: space-between;
   height: 45px;
-  background: $blue;
-  padding: 10px;
+  background: $color-blue;
+  padding: $space-sm $space-md;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: $font-size-sm;
   line-height: 2rem;
-  margin-top: 1rem;
+  margin-top: $space-md;
 }
 
 .h-card {
-  padding: 10px;
+  padding: $space-sm;
 }
 
 .footer__container {
-  color: $yellow;
+  color: $color-yellow;
 }

@@ -3,68 +3,58 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 0.875rem;
 
-  @media screen and (min-width: $medium) {
-    font-size: 18px;
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 1.125rem;
   }
 }
 
 .splash {
   h1 {
-    font-size: 3em;
+    font-size: $font-size-4xl;
     line-height: 1;
     letter-spacing: -0.03em;
     margin: 0;
+    font-family: $font-primary;
   }
 
   h2 {
-    font-size: 2.25em;
+    font-size: $font-size-3xl;
     font-weight: 500;
     line-height: 1.25;
     max-width: 22em;
     letter-spacing: -0.03em;
+    font-family: $font-primary;
   }
 }
 
 .fancy {
-  color: $primary;
+  color: $color-primary;
 }
 
 .handle {
   display: inline-block;
   margin-top: 0.275em;
-  color: $grey;
+  color: $color-grey-400;
   letter-spacing: 0.5px;
 }
 
 .writing {
   text-decoration: none;
-  color: $primary;
+  color: $color-primary;
 }
 
 .subheading {
-  padding-right: 15vw;
   font-weight: 400;
 }
 
 .about {
   padding-top: 25vh;
-  padding-bottom: 0;
-  padding-left: 25vw;
 }
-
-/* overrides */
-
-// main {
-//   padding-top: 25vh;
-//   padding-bottom: 0;
-//   padding-left: 25vw;
-//   height: 100%;
-// }
 
 .social-icons {
   justify-content: flex-start;
-  padding-top: 1rem;
-  margin-left: -0.8rem; // offset to negate icon's padding to align with text above
+  padding-top: $space-md;
+  margin-left: -0.8rem;
 }
