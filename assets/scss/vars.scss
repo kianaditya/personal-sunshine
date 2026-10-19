@@ -65,7 +65,8 @@ $color-dark-text: #f5f5f5;
 $color-dark-muted: #b0b0b0;
 
 // === Typography Tokens ===
-$font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
 $font-mono: "Fira Code", monospace;
 
 $base-font-size: 16px;
@@ -115,5 +116,3 @@ $large: $breakpoint-lg;
 // === Max Widths ===
 $content-max-width: 45rem;
 $toc-max-width: 350px;
-
-

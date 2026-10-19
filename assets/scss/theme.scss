@@ -1,76 +1,76 @@
 /* === Dark Mode Theme === */
 body.dark-mode {
-	background-color: $bg-dark-body;
-	color: $color-dark-text;
+  background-color: $bg-dark-body;
+  color: $color-dark-text;
 }
 
 body.dark-mode main {
-	background-color: $bg-dark-body;
-	color: $color-dark-text;
+  background-color: $bg-dark-body;
+  color: $color-dark-text;
 }
 
 /* Dark mode navbar */
 body.dark-mode .navbar {
-	background: #1a1a1a;
+  background: #1a1a1a;
 }
 
 body.dark-mode .name {
-	color: $color-dark-text;
+  color: $color-dark-text;
 }
 
 body.dark-mode .navbar__right a {
-	color: $color-dark-text;
+  color: $color-dark-text;
 }
 
 body.dark-mode .navbar__right a:hover {
-	color: $color-yellow;
+  color: $color-yellow;
 }
 
 /* Dark mode footer */
 body.dark-mode .footer {
-	background: #1a1a1a;
+  background: #1a1a1a;
 }
 
 body.dark-mode .footer__container {
-	color: $color-yellow;
+  color: $color-yellow;
 }
 
 body.dark-mode .h-card {
-	color: $color-dark-muted;
+  color: $color-dark-muted;
 }
 
 /* Dark mode content area */
 body.dark-mode .content {
-	background-color: $bg-dark-body;
+  background-color: $bg-dark-body;
 }
 
 /* Dark mode links */
 body.dark-mode a {
-	color: #8ab4f8;
+  color: #8ab4f8;
 }
 
 /* Dark mode titles */
 body.dark-mode .title {
-	color: #8ab4f8;
+  color: #8ab4f8;
 }
 
 body.dark-mode .summary {
-	color: $color-dark-text;
+  color: $color-dark-text;
 }
 
 body.dark-mode #post__title {
-	color: $color-dark-text;
+  color: $color-dark-text;
 }
 
 /* Dark mode text elements */
 body.dark-mode p,
 body.dark-mode li {
-	color: $color-dark-text;
+  color: $color-dark-text;
 }
 
 body.dark-mode .post-date,
 body.dark-mode .post__date {
-	color: $color-dark-muted;
+  color: $color-dark-muted;
 }
 
 /* Dark mode headings */
@@ -80,139 +80,139 @@ body.dark-mode h3,
 body.dark-mode h4,
 body.dark-mode h5,
 body.dark-mode h6 {
-	color: $color-dark-text;
+  color: $color-dark-text;
 }
 
 /* Dark mode code blocks */
 body.dark-mode pre {
-	background-color: $bg-dark-code;
+  background-color: $bg-dark-code;
 }
 
 body.dark-mode code {
-	background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Dark mode blockquote */
 body.dark-mode blockquote {
-	color: $color-dark-text;
+  color: $color-dark-text;
 }
 
 body.dark-mode blockquote::before {
-	color: #555;
+  color: #555;
 }
 
 body.dark-mode blockquote p {
-	background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Dark mode table */
 body.dark-mode table thead {
-	background-color: $bg-dark-table-header;
+  background-color: $bg-dark-table-header;
 }
 
 body.dark-mode table th,
 body.dark-mode table td {
-	border-color: #444;
+  border-color: #444;
 }
 
 /* Dark mode tag badges */
 body.dark-mode .tag__link,
 body.dark-mode .tag__link__list {
-	background: rgba(255, 255, 255, 0.1);
-	color: #ccc;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ccc;
 }
 
 body.dark-mode .tag__link:hover,
 body.dark-mode .tag__link__list:hover {
-	background: rgba(231, 163, 57, 0.2);
+  background: rgba(231, 163, 57, 0.2);
 }
 
 body.dark-mode .tag__selected {
-	background: rgba(231, 163, 57, 0.2);
+  background: rgba(231, 163, 57, 0.2);
 }
 
 /* Dark mode pagination */
 body.dark-mode .pagination__item {
-	color: $color-dark-text;
+  color: $color-dark-text;
 
-	&:hover {
-		background-color: rgba(255, 255, 255, 0.05);
-	}
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
 }
 
 body.dark-mode .pagination__label {
-	color: $color-dark-muted;
+  color: $color-dark-muted;
 }
 
 body.dark-mode .pagination__title {
-	color: $color-dark-text;
+  color: $color-dark-text;
 }
 
 /* Dark mode info blocks */
 body.dark-mode .block.info {
-	background-color: rgba(0, 188, 212, 0.15);
+  background-color: rgba(0, 188, 212, 0.15);
 }
 
 body.dark-mode .block.warning {
-	background-color: rgba(255, 152, 0, 0.15);
+  background-color: rgba(255, 152, 0, 0.15);
 }
 
 body.dark-mode .block.error {
-	background-color: rgba(244, 67, 54, 0.15);
+  background-color: rgba(244, 67, 54, 0.15);
 }
 
 body.dark-mode .block.normal {
-	background-color: rgba(155, 155, 155, 0.15);
+  background-color: rgba(155, 155, 155, 0.15);
 }
 
 /* Dark mode 404 page */
 body.dark-mode .error-page h1 {
-	color: $color-dark-muted;
+  color: $color-dark-muted;
 }
 
 body.dark-mode .error-page p,
 body.dark-mode .error-page a {
-	color: $color-dark-text;
+  color: $color-dark-text;
 }
 
 body.dark-mode .error-page a:hover {
-	color: $color-yellow;
+  color: $color-yellow;
 }
 
 /* Dark mode TOC */
 body.dark-mode #TableOfContents a {
-	color: $color-dark-muted;
+  color: $color-dark-muted;
 }
 
 body.dark-mode #TableOfContents a.active {
-	color: $color-dark-text;
+  color: $color-dark-text;
 }
 
 /* Dark mode footer text */
 body.dark-mode footer p {
-	color: $color-dark-muted;
-	background-color: $bg-dark-body;
+  color: $color-dark-muted;
+  background-color: $bg-dark-body;
 }
 
 /* Dark mode splash/about page */
 body.dark-mode .handle {
-	color: $color-dark-muted;
+  color: $color-dark-muted;
 }
 
 body.dark-mode .writing {
-	color: $color-primary;
+  color: $color-primary;
 }
 
 body.dark-mode .fancy {
-	color: $color-primary;
+  color: $color-primary;
 }
 
 /* Dark mode category badge */
 body.dark-mode .category {
-	color: #fff;
+  color: #fff;
 }
 
 /* Dark mode figure/figcaption */
 body.dark-mode figcaption {
-	color: $color-dark-muted;
+  color: $color-dark-muted;
 }
