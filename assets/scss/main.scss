@@ -46,6 +46,8 @@ main {
   font-family: $font-primary;
   text-decoration: none;
   color: $color-blue;
+  margin-bottom: $space-lg;
+  display: block;
 }
 
 .summary {

@@ -50,8 +50,15 @@
 .post {
   width: 100%;
   font-family: "Inter";
+  font-size: 0.875rem;
   max-width: 45rem;
   margin: 0 auto;
+  p {
+    font-size: inherit;
+  }
+  .page-text {
+    font-size: inherit;
+  }
   h2,
   h3 {
     position: relative;
@@ -146,7 +153,7 @@
   a {
     text-decoration: none;
     color: #9b9b9b;
-    font-size: 0.9rem;
+    font-size: 12px;
   }
 
   a.active {
