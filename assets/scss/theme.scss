@@ -50,7 +50,8 @@ body.dark-mode a {
 }
 
 /* Dark mode titles */
-body.dark-mode .title {
+body.dark-mode .title,
+body.dark-mode h3 a.title {
   color: #8ab4f8;
 }
 

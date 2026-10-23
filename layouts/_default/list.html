@@ -15,7 +15,7 @@
       {{ else }}
         <h3>
           <a class="title" href="{{ .RelPermalink }}">
-            {{ .Summary | truncate 60 }}
+            {{ .Summary | plainify | truncate 60 }}
           </a>
         </h3>
       {{ end }}

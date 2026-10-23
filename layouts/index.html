@@ -1,19 +1,20 @@
 {{ define "main" }}
-  <div class="about">
-    <div class="about__header">
-      <h1>
-        {{ .Title | default .Params.heading }}<span class="fancy">.</span>
-      </h1>
-      <h5 class="subheading">
-        {{ .Description | default .Params.subheading }}
-      </h5>
-    </div>
-    {{ if .Params.handle }}
-      <span class="handle">@{{ .Params.handle }}</span>
+  <div class="content">
+    {{ $pages := where site.RegularPages "Section" "in" (slice "blog" "note") }}
+    {{ range $pages }}
+      {{ if .Title }}
+        <h3>
+          <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+      {{ else }}
+        <h3>
+          <a class="title" href="{{ .RelPermalink }}">
+            {{ .Summary | plainify | truncate 60 }}
+          </a>
+        </h3>
+      {{ end }}
+      {{ partial "metadata.html" . }}
     {{ end }}
-    {{ .Content }}
-    <!-- Renders body Markdown from _index.md -->
-    {{ partial "social-icons.html" . }}
   </div>
 {{ end }}
 
