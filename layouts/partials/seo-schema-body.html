@@ -1,0 +1,65 @@
+{{ $authorName := .Site.Params.name | default "Aditya Naik" }}
+{{ $authorURL := .Site.Params.github | default "https://github.com/kianaditya" }}
+{{ $siteBaseURL := .Site.BaseURL }}
+{{ $siteName := .Site.Title }}
+{{ $siteDesc := .Site.Params.description | default "Aditya Naik full stack developer blog" }}
+
+{{ if and (.IsPage) (or (eq .Section "blog") (eq .Section "note")) }}
+  { "@context": "https://schema.org", "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ .Permalink }}" },
+  "headline": "{{ .Title | htmlEscape }}", "name": "{{ .Title | htmlEscape }}",
+  "description":
+  "{{ .Description | default (.Summary | plainify | truncate 150) | htmlEscape }}",
+  "inLanguage":
+  {{ with .Site.Language.Lang }}"{{ . }}"{{ else }}"en-US"{{ end }}, "url" :
+  "{{ .Permalink }}", "datePublished":
+  "{{ .Date.Format "2006-01-02T15:04:05-07:00" }}", "dateModified":
+  "{{ with .Lastmod }}
+    {{ .Format "2006-01-02T15:04:05-07:00" }}
+  {{ else }}
+    {{ .Date.Format "2006-01-02T15:04:05-07:00" }}
+  {{ end }}",
+  "author": { "@type": "Person", "name": {{ $authorName | jsonify }}, "url":
+  {{ $authorURL | jsonify }}
+  }, "publisher": { "@type": "Organization", "name":
+  {{ $authorName | jsonify }}, "url":
+  {{ $siteBaseURL | jsonify }}
+  }, "isPartOf": { "@type": ["WebSite", "Blog"], "name":
+  {{ $siteName | jsonify }}, "url":
+  {{ $siteBaseURL | jsonify }}
+  }, "copyrightHolder": "{{ $authorName }}", "copyrightYear":
+  "{{ with .Lastmod }}
+    {{ .Format "2006" }}
+  {{ else }}
+    {{ .Date.Format "2006" }}
+  {{ end }}",
+  "articleSection": "{{ .Section }}", "wordCount": {{ .WordCount }}, "keywords":
+  [{{ if isset .Params "keywords" }}
+    {{ range $i, $kw := .Params.keywords }}
+      {{ if $i }},{{ end }}"{{ $kw }}"
+    {{ end }}
+  {{ else }}
+    "{{ .Section }}"
+  {{ end }}]
+  {{- with .Params.images }}
+    ,"image":
+    [{{ range $i, $img := . }}
+      {{ if $i }},{{ end }}"{{ $img | absURL }}"
+    {{ end }}]
+  {{- else }}
+    ,"image": [{{ with .Site.Params.ogImage }}{{ . | absURL }}{{ end }}]
+  {{- end }}
+  }
+{{ else }}
+  { "@context": "https://schema.org", "@type": "WebSite", "@id":
+  "{{ $siteBaseURL }}#website", "url": "{{ $siteBaseURL }}", "name":
+  {{ $siteName | jsonify }}, "description":
+  {{ $siteDesc | htmlEscape | jsonify }}, "inLanguage":
+  {{ with .Site.Language.Lang }}"{{ . }}"{{ else }}"en-US"{{ end }}, "author": {
+  "@type": "Person", "name": {{ $authorName | jsonify }}, "url":
+  {{ $authorURL | jsonify }}
+  }, "publisher": { "@type": "Organization", "name":
+  {{ $authorName | jsonify }}, "url":
+  {{ $siteBaseURL | jsonify }}
+  } }
+{{ end }}
