@@ -1,41 +1,4 @@
 <!-- JSON-LD -->
 <script type="application/ld+json">
-  {{ if and (.IsPage) (or (eq .Section "blog") (eq .Section "note")) }}
-    {
-      "@context" : "http://schema.org",
-      "@type" : "BlogPosting",
-      "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "{{ .Site.BaseURL }}"
-      },
-      "articleSection" : "{{ .Section }}",
-      "name" : "{{ .Title }}",
-      "headline" : "{{ .Title }}",
-      "description" : "{{ .Description }}",
-      "inLanguage" : {{ with .Site.Language.Lang }}"{{ . }}"{{ else }}"en"{{ end }},
-      "author" : "{{ .Site.Params.name }}",
-      "creator" : "{{ .Site.Params.name }}",
-      "publisher": "{{ .Site.Params.name }}",
-      "accountablePerson" : "{{ .Site.Params.name }}",
-      "copyrightHolder" : "{{ .Site.Params.name }}",
-      "copyrightYear" : "{{ with .Lastmod }}{{ .Format "2006" }}{{ else }}{{ .Date.Format "2006" }}{{ end }}",
-      "datePublished": "{{ .Date.Format "2006-01-02" }}",
-      "dateModified" : "{{ with .Lastmod }}{{ .Format "2006-01-02" }}{{ else }}{{ .Date.Format "2006-01-02" }}{{ end }}",
-      "url" : "{{ .Permalink }}",
-      "wordCount" : "{{ .WordCount }}",
-      "keywords" : [{{ if isset .Params "keywords" }}{{ range $i, $kw := .Params.keywords }}{{ if $i }}, {{ end }}"{{ $kw }}"{{ end }}{{ else }}"{{ .Section }}"{{ end }}]
-    }
-  {{ else }}
-    {
-      "@context": "http://schema.org",
-      "@type": "WebSite",
-      "url": "{{ .Permalink }}",
-      "name": "{{ .Title }}",
-      "author": {
-        "@type": "Person",
-        "name": "{{ .Site.Params.name }}"
-      },
-      "description": "{{ if .IsHome }}{{ htmlEscape .Site.Params.description }}{{ else }}{{ htmlEscape .Description }}{{ end }}"
-    }
-  {{ end }}
-  </script>
+{{ partial "seo-schema-body.html" . }}
+</script>

@@ -18,14 +18,92 @@
       {{ else if .Description }}
         {{ .Page.Params.Description }}
       {{ else }}
-        {{ humanize .Slug }}
+        {{ .Summary | plainify | truncate 150 }}
       {{ end }}"
     />
-    {{ $keywords := delimit .Keywords " , " }}
-    <meta name="keywords" content="{{ $keywords }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{/* Canonical URL */}}
+    <link rel="canonical" href="{{ .Permalink }}" />
+
+    {{/* Open Graph tags */}}
+    <meta
+      property="og:title"
+      content="{{ if .IsHome }}
+        {{ .Site.Title }}
+      {{ else }}
+        {{ .Title }}
+      {{ end }}"
+    />
+    <meta
+      property="og:description"
+      content="{{ if .IsHome }}
+        {{ .Site.Params.Description }}
+      {{ else if .Description }}
+        {{ .Description }}
+      {{ else }}
+        {{ .Summary | plainify | truncate 150 }}
+      {{ end }}"
+    />
+    <meta
+      property="og:type"
+      content="{{ if .IsPage }}
+        article
+      {{ else }}
+        website
+      {{ end }}"
+    />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    {{ with .Site.Params.ogImage }}
+      <meta property="og:image" content="{{ . | absURL }}" />
+    {{ end }}
+    {{- if .IsPage }}
+      {{- with .Params.images }}
+        <meta property="og:image" content="{{ index . 0 | absURL }}" />
+      {{ end }}
+    {{- end }}
+    {{- with .Site.Params.locale }}
+      <meta property="og:locale" content="{{ . }}" />
+    {{ end }}
+
+    {{/* Twitter Card tags */}}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="{{ if .IsHome }}
+        {{ .Site.Title }}
+      {{ else }}
+        {{ .Title }}
+      {{ end }}"
+    />
+    <meta
+      name="twitter:description"
+      content="{{ if .IsHome }}
+        {{ .Site.Params.Description }}
+      {{ else if .Description }}
+        {{ .Description }}
+      {{ else }}
+        {{ .Summary | plainify | truncate 150 }}
+      {{ end }}"
+    />
+    {{ with .Site.Params.ogImage }}
+      <meta name="twitter:image" content="{{ . | absURL }}" />
+    {{ end }}
+    {{- if .IsPage }}
+      {{- with .Params.images }}
+        <meta name="twitter:image" content="{{ index . 0 | absURL }}" />
+      {{ end }}
+    {{- end }}
+    {{ with .Site.Params.twitterSite }}
+      <meta name="twitter:site" content="{{ . }}" />
+    {{ end }}
+    {{ with .Site.Params.twitterAuthor }}
+      <meta name="twitter:creator" content="{{ . }}" />
+    {{ end }}
+
     {{ range .AlternativeOutputFormats -}}
       {{ printf `
         <link rel="%s" type="%s" href="%s" title="%s" />
