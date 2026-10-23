@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <div class="about">
+    <div class="about__header">
+      <h1>
+        {{ .Title | default .Params.heading }}<span class="fancy">.</span>
+      </h1>
+      <h5 class="subheading">
+        {{ .Description | default .Params.subheading }}
+      </h5>
+    </div>
+    {{ if .Params.handle }}
+      <span class="handle">@{{ .Params.handle }}</span>
+    {{ end }}
+    {{ .Content }}
+    <!-- Renders body Markdown from _index.md -->
+    {{ partial "social-icons.html" . }}
+  </div>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer" . }}
+{{ end }}
