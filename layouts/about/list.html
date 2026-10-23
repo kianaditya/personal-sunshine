@@ -5,7 +5,7 @@
         {{ .Title | default .Params.heading }}<span class="fancy">.</span>
       </h1>
       <h5 class="subheading">
-        {{ .Description | default .Params.subheading }}
+        {{ .Params.subheading }}
       </h5>
     </div>
     {{ if .Params.handle }}
