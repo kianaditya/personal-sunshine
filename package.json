@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/kianaditya/personal-sunshine#readme",
   "devDependencies": {
-    "prettier": "^2.8.1",
-    "prettier-plugin-go-template": "^0.0.13"
+    "prettier": "^3.9.10",
+    "prettier-plugin-go-template": "^0.0.15"
   }
 }
