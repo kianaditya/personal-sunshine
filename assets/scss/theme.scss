@@ -1,3 +1,5 @@
+@use "vars" as *;
+
 /* === Dark Mode Theme === */
 body.dark-mode {
   background-color: $bg-dark-body;

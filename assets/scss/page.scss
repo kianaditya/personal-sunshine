@@ -1,3 +1,6 @@
+@use "vars" as *;
+@use "sass:color";
+
 .blog__details {
   display: flex;
   align-items: center;
@@ -183,13 +186,13 @@
   text-decoration: none;
   padding: 0.2em 0.4em;
   border-radius: 3px;
-  background: lighten($green, 61%);
-  color: darken($green, 20%);
+  background: color.adjust($green, $lightness: 61%);
+  color: color.adjust($green, $lightness: -20%);
   font-size: 0.8rem;
 
   &:hover {
     color: $yellow;
-    background: lighten($yellow, 38%);
+    background: color.adjust($yellow, $lightness: 38%);
   }
 }
 
@@ -198,13 +201,13 @@
   text-decoration: none;
   padding: 0.2em 0.4em;
   border-radius: 3px;
-  background: lighten($green, 61%);
-  color: darken($green, 20%);
+  background: color.adjust($green, $lightness: 61%);
+  color: color.adjust($green, $lightness: -20%);
   font-size: 0.8rem;
 
   &:hover {
     color: $yellow;
-    background: lighten($yellow, 38%);
+    background: color.adjust($yellow, $lightness: 38%);
   }
 }
 
@@ -213,7 +216,7 @@
   padding: 0.2em 0.4em;
   border-radius: 3px;
   color: $yellow;
-  background: lighten($yellow, 38%);
+  background: color.adjust($yellow, $lightness: 38%);
   font-size: 1.2rem;
   margin-top: 0.2em;
   margin-bottom: 0.2em;
@@ -333,22 +336,22 @@ table {
   }
   &.info {
     border-left: 5px solid $infoColor;
-    background-color: lighten($infoColor, 50%);
+    background-color: color.adjust($infoColor, $lightness: 50%);
   }
 
   &.warning {
     border-left: 5px solid $warningColor;
-    background-color: lighten($warningColor, 30%);
+    background-color: color.adjust($warningColor, $lightness: 30%);
   }
 
   &.error {
     border-left: 5px solid $errorColor;
-    background-color: lighten($errorColor, 30%);
+    background-color: color.adjust($errorColor, $lightness: 30%);
   }
 
   &.normal {
     border-left: 5px solid $baseColorDark;
-    background-color: lighten($baseColorDark, 30%);
+    background-color: color.adjust($baseColorDark, $lightness: 30%);
   }
 }
 
@@ -361,14 +364,14 @@ table {
     font-size: 4em;
     margin-top: 0.1em;
     margin-left: -0.42em;
-    color: darken($baseColor, 33%);
+    color: color.adjust($baseColor, $lightness: -33%);
   }
   margin: 1.5em 10px;
   padding: 0.25em 10px;
   p {
     margin: 0.1rem;
     font-style: italic;
-    background-color: darken($baseColor, 1%);
+    background-color: color.adjust($baseColor, $lightness: -1%);
   }
   cite {
     &::before {
