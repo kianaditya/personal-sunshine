@@ -24,6 +24,9 @@
 
     {{/* Canonical URL */}}
     <link rel="canonical" href="{{ .Permalink }}" />
+    {{ with .OutputFormats.Get "rss" }}
+      <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}" />
+    {{ end }}
 
     {{/* Open Graph tags */}}
     <meta
